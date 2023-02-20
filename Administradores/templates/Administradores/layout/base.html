@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="login__nav ps-5 pe-5 pt-2">
+        <div class="login__nav__div1">
+            <img class="" src="{% static 'img/LogoUPTap.png' %}"/>
+        </div>
+
+        <div class="d-flex justify-content-between gap-5">
+            <a class="login__home__nav text-decoration-none" href="{% url 'panel_administrador' %}">Panel</a>
+            <a class="login__home__nav text-decoration-none" href="#">Alumnos</a>
+            <a class="login__home__nav text-decoration-none" href="{% url 'login_administradores' %}">Salir</a>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

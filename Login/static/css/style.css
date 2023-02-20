@@ -1,0 +1,78 @@
+body {
+  background-image: url("");
+}
+
+.login__nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.login__nav div img {
+  height: 100px;
+  width: 100px;
+}
+
+.login__nav div a {
+  color: black;
+}
+
+.LoginMain {
+  margin-top: 5rem;
+}
+
+/*.main__home__div2 {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(4, 1fr);*/
+/*}*/
+
+.main__home__div2 img {
+  width: 20rem;
+  height: 20rem;
+}
+
+/*.main__home__div2__img2 {*/
+/*    grid-column: ;*/
+/*}*/
+
+/*.main__registro {*/
+/*    display: grid;*/
+/*    grid-template-columns: 2fr 3fr;*/
+/*}*/
+
+/*.main__registro form {*/
+/*    gri*/
+/*}*/
+
+.main__registro__alumno {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.main__registro form {
+  place-self: end;
+}
+
+.login_fomulario_login div {
+  gap: 5rem;
+}
+
+.input__form input {
+  width: 20rem;
+  text-align: center;
+}
+
+.img-1{
+
+  height: 20rem;
+  width: 20rem;
+}
+
+.img-2{
+
+  height: 20rem;
+  width: 20rem;
+}
+

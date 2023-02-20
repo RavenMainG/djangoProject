@@ -1,0 +1,34 @@
+{% extends 'Alumnos/layouts/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="mb-4">Solicitud de Credencial</h1>
+
+                <p>Bienvenido {{ alumno.get_short_name }}. Por favor, complete la siguiente solicitud:</p>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    {% if solicitud_aprobada %}
+                        <div class="alert alert-danger">
+                            Usted ya tiene una credencial aprobada. Por favor, espere a que expire para solicitar una
+                            nueva.
+                        </div>
+                    {% elif solicitud_pendiente %}
+                        <div class="alert alert-warning">
+                            Usted ya tiene una solicitud de credencial pendiente. Por favor, espere a que sea aprobada o
+                            rechazada para solicitar una nueva.
+                        </div>
+                    {% else %}
+                        <p>Por favor, complete la siguiente solicitud:</p>
+                        <button type="submit" class="btn btn-primary">Solicitar Credencial</button>
+                    {% endif %}
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

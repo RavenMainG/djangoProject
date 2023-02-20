@@ -1,0 +1,32 @@
+{% extends 'Alumnos/layouts/base.html' %}
+
+{% block content %}
+    <main class="mt-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4 class="card-title">Credencial de Estudiante</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <h5 class="card-subtitle mb-2 text-muted">Bienvenido {{ alumno.get_full_name }}</h5>
+                            <img src="https://via.placeholder.com/150" class="rounded-circle my-3" alt="Foto de Perfil">
+                            <h6 class="card-subtitle mb-2 text-muted">Matrícula: {{ alumno.matricula }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Estado: {{ alumno.credencial.estado_credencial }}</h6>
+                            {% if alumno.credencial.estado_credencial == 'inactiva' %}
+                                <p>* Debido a que el estado de la credencial está inactiva, tienes que solicitar la
+                                    activación. Ve al apartado de solicitudes.</p>
+                            {% endif %}
+                            {% if alumno.credencial.estado_credencial == 'activa' %}
+                                <p>* Debido a que el estado de la credencial está activa, puedes solicitar la renovación.
+                                    Ve al apartado de solicitudes.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

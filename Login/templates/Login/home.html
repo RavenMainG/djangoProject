@@ -1,0 +1,22 @@
+{% extends 'Login/layout/base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+        <div class="mb-5 col-md-6 col-lg-4 p-4 border shadow rounded">
+            <h2 class="mb-4">Universidad Politecnica de Tapachula</h2>
+            <p>Sistema de gestion y registro de credenciales para alumnos</p>
+            <p>Crea tu cuenta para poder solicitar tu credencial estudiantil</p>
+            <p>Al obtener tu credecial adquieres los beneficios que esta te proporciona</p>
+            <a class="btn btn-info mt-3" href="/alumnos/crear_cuenta">Crea tu cuenta</a>
+        </div>
+        <div class="col-md-6 col-lg-8 d-flex justify-content-center">
+            <div class="d-flex flex-column justify-content-center">
+            <img class="img-1 img-fluid p-0 mb-3" src="{% static 'img/imgHomeCredencial.jpeg' %}"/>
+            <img class="img-2 img-fluid" src="{% static 'img/imgHomeCredencial2.jpeg' %}"/>
+            </div>
+        </div>
+        </div>
+    </div>  
+{% endblock %}
